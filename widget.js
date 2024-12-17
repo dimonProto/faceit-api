@@ -1,5 +1,5 @@
-const apiKey = "";
-const playerId = ""
+import { apiKey, playerId } from '/constant.js'
+
 const playerName = "OpenForce";
 const urlPlayer = `https://open.faceit.com/data/v4/players?nickname=${playerName}`;
 const urlStatsPlayer = `https://open.faceit.com/data/v4/players/${playerId}/stats/cs2`;
@@ -23,6 +23,7 @@ const fetchData = async (url) => {
 
 
 const displayData = async () => {
+
   const [data, stats] = await Promise.all([fetchData(urlPlayer), fetchData(urlStatsPlayer)])
 
    const winLose = stats?.lifetime["Recent Results"]?.map(el => el && el > 0 ? `<p class="green">W</p>` : `<p class="red">L</p>`).join(' ')
@@ -55,7 +56,6 @@ const displayData = async () => {
            <p>${data.games.cs2.faceit_elo}</p>
           <img src="/icons/faceit${data.games.cs2.skill_level}.svg"/>
       </div>
-     
        <div class="stats-group">
         <div class="stats-group-left">
           <p class="stats-title">K/D</p>
@@ -68,11 +68,11 @@ const displayData = async () => {
         <div class="win-lose-main">${winLose}</div>
      </div>
     </div>
-   
-    
     `;
   document.getElementById("player-data").innerHTML = playerStats;
 }
+
+
 
 displayData()
 

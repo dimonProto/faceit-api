@@ -1,0 +1,22 @@
+{
+  "name": "faceit",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "widget.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node widget.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dimonProto/faceit-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dimonProto/faceit-api/issues"
+  },
+  "homepage": "https://github.com/dimonProto/faceit-api#readme",
+  
+}
