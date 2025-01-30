@@ -1,12 +1,11 @@
 {
   "name": "faceit",
   "version": "1.0.0",
-  "type": "module",
   "description": "",
-  "main": "widget.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node widget.js"
+     "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -18,5 +17,7 @@
     "url": "https://github.com/dimonProto/faceit-api/issues"
   },
   "homepage": "https://github.com/dimonProto/faceit-api#readme",
-  
+  "dependencies": {
+    "electron": "^33.2.1"
+  }
 }
